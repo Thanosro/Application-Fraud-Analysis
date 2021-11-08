@@ -8,7 +8,7 @@ As a first step, we substituted some frivolous values in the records with a uniq
 #### Feature Selection
 Following, we performed feature selection, to choose a subset of around 30 features to use as inputs for our models. First, we measured the correlation of each feature with the fraud distribution, using the Kolmogorov–Smirnov (KS) distance and the FDR @ 3% and we kept 1/3 of the features. Second we used recursive feature elimination using a logistic regression model with L2 regularization and the FDR @ 3% metric and kept 30 features.
 #### Statistical Models & Results
-For fraud detection we used 4 models: Logistic regression, Boodted Trees, Neural Networks and Random Forests. We trained the models using different paraemeters and configurations each time. The FDR @ 3% for training, test and validation (out of time (OOT)) sets for the best parameter are presented below: 
+For fraud detection we used 4 models: Logistic regression, Boodted Trees, Neural Networks and Random Forests. We trained the models using different paraemeters and configurations each time. The FDR @ 3% for training, test and validation (out of time (OOT)) sets for the best parameters are presented below: 
 | Model | Training | Test | OOT |
 |---|---|---|---|
 | Logistic regression | 0.55 | 0.54 | 0.52 |
@@ -16,4 +16,4 @@ For fraud detection we used 4 models: Logistic regression, Boodted Trees, Neural
 | Neural Network | 0.57 | 0.56 | 0.547 |
 | Random Forests | 0.56 | 0.57 | 0.548 |
 
-The random forest model performed better in the test dataset, thus we chose this as our final model. 
+The random forest model performed slightly better in the test dataset, thus we chose this as our final model. 
